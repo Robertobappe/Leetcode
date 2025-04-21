@@ -1,13 +1,10 @@
 function twoSum (nums, target){
     map = {};
-    index = [];
     for(let i=0; i<nums.length; i++){
         comp = target - nums[i];
         
         if(map[target - nums[i]]){
-            index.push(nums.indexOf(comp));
-            index.push(i);
-            return index; 
+            return [nums.indexOf(comp),i]; 
         }
         if(!map[comp]){
             map[nums[i]] = true; 
