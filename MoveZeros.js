@@ -14,6 +14,7 @@ function moveZeroes (nums){
     return arrNums;
 }
 
+//Best solution
 function moveZeroes2(nums){
     let j = 0;
     let aux = 0;
