@@ -1,6 +1,5 @@
 function rotate(nums,k){
     k = k % nums.length;
-    console.log('valor de k '+ k);
 
     nums.reverse();
     revNums(nums,0,k-1);
@@ -14,3 +13,5 @@ function revNums(nums,start,end){
         end--;
     }
 }
+
+console.log(rotate([-1,-100,3,99],2));
