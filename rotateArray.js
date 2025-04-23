@@ -1,20 +1,16 @@
-/*
-function rotate(nums, k){
-   for(let i=0; i<k; i++){
-        //pop() removes the last element from an array
-        //unshift() adds the specified elements to the 
-        //beginning of an array
-        nums.unshift(nums.pop());
-    }
-    return nums;
-}
-
-console.log(rotate([-1,-100,3,99],2));
-*/
-
 function rotate(nums,k){
-    let arr1 = nums.slice(0,nums.length - k);
-    const arr2 = nums.slice(nums.length - k,nums.length);
-    return arr2.concat(arr1);
+    k = k % nums.length;
+    console.log('valor de k '+ k);
+
+    nums.reverse();
+    revNums(nums,0,k-1);
+    revNums(nums,k,nums.length-1);
 }
-console.log(rotate([1,2,3,4,5,6,7],3));
+
+function revNums(nums,start,end){
+    while(start < end){
+        [nums[start], nums[end]] = [nums[end],nums[start]];
+        start++;
+        end--;
+    }
+}
