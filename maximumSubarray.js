@@ -19,4 +19,6 @@ function maxSubarray(nums){
     return arr[0];
 }
 
+//better way
+
 console.log(maxSubarray([5,4,-1,7,8]));
