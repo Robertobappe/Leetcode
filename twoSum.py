@@ -17,7 +17,17 @@ def TwoSum2(nums,target):
         map[nums[i]] = i
     return None
 
+def main():
+    # Test cases
+    test_cases = [
+        ([2, 7, 11, 15], 9),
+        ([3, 2, 4], 6),
+        ([3, 3], 6),
+    ]
+    
+    for nums, target in test_cases:
+        result = TwoSum2(nums, target)
+        print(f"nums: {nums}, target: {target} -> {result}")
 
-print(TwoSum2([2,7,11,15],9))
-print(TwoSum2([3,2,4],6))
-print(TwoSum2([3,3],6))
+if __name__ == "__main__":
+    main()  
