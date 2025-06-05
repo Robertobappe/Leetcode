@@ -3,6 +3,7 @@ from collections import deque
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = deque()
+        '''
         for i in s:
             if i == '(' or i == '{' or i == '[':
                 stack.append(i)
@@ -12,7 +13,19 @@ class Solution:
                 return False
         if len(stack) == 0:
             return True
+        return False'''
+
+        #Another solution
+        mapC = {')':'(','}':'{',']':'['}
+        for i in s:
+            if mapC[i]:
+                stack.pop()
+            stack.append(i)
+        if len(stack) == 0:
+            return True
         return False
+
+    
 
 sol = Solution()
 rel = sol.isValid("()")
