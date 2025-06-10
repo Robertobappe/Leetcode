@@ -34,7 +34,7 @@ class Solution:
                             left += 1
         return resp
 
-# Try to undertand the recursion solution!
+# Try to undertand the recursion solution!!
 
 def main():
     testes_cases = [
