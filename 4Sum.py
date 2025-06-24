@@ -15,7 +15,7 @@ class Solution:
             for j in range(i+1, len(nums)):
                 # Once the list is sorted, we don't want the new valeu has
                 #the same previous value
-                if j > 1 and nums[j] == nums[j-1]:
+                if j > i+1 and nums[j] == nums[j-1]:
                     continue
                 
                 # Two pointers problem
@@ -39,7 +39,8 @@ class Solution:
 def main():
     testes_cases = [
         ([1,0,-1,0,-2,2], 0),
-        ([2,2,2,2,2], 8)
+        ([2,2,2,2,2], 8),
+        ([-2,-1,-1,1,1,2,2], 0)
     ]
 
     sol = Solution()
