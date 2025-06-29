@@ -2,6 +2,8 @@ import re
 
 class solution:
     def isPalindrome(self, s: str) -> bool:
+        # Time O(n)
+        # Space O(n)
         newStr = ''
 
         for c in s:
